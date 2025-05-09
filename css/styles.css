@@ -21,6 +21,10 @@ body {
   color: white;
   padding: 1rem;
   text-align: center;
+  margin-top: -8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: 0px;
 }
 .header-principal h1 {
   font-family: 'Montserrat', sans-serif;
@@ -37,6 +41,10 @@ body {
   position: sticky;
   top: 0;
   z-index: 100;
+  margin-top: -8px;
+  margin-left: -8px;
+  margin-right: -8px;
+  margin-bottom: 0px;
 }
 
 .menu-principal a {
@@ -73,7 +81,7 @@ article {
   flex: 1;
   margin-left: 20px;
   margin-right: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 1rem;
   background-color: white;
   border-radius: 15px;
@@ -81,6 +89,7 @@ article {
 }
 
 .seccion {
+  margin-top: 20px;
   margin-left: 30px;
   margin-right: 30px;
    padding: 1rem;
@@ -155,6 +164,39 @@ legend {
 
 }
 
+fieldset {
+  border: 2px solid #4e2a96;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 1rem;
+  background-color: #f9f9f9;
+  display: grid;
+}
+
+label {
+  font-family: 'Montserrat', sans-serif;
+  color: #4e2a96;
+  font-size: 20px;
+  margin-bottom: 0.5rem;
+
+}
+button {
+  background-color: #4e2a96;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-align: center;
+  margin-right: 25%;
+  margin-left: 25%;
+  width: 50%;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 25px;
+}
+
 table {
   width: 95%;
   border-collapse: collapse;
@@ -188,15 +230,18 @@ th {
 }
 
 #chatbot {
-  color: white;
+  display: inline-block;
+  padding: 10px;
   background-color: #4e2a96;
-  border-radius: 100%;
-  font-family: 'Montserrat', sans-serif;
-  width: 50px;
-  height: 50px;
-  border-radius: 15px;                        
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-  position: fixeds;
+  color: white;
+  border-radius: 33%;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0px 0px 5px 5px blueviolet;
+  position: sticky;
+  top: 720px;
+  z-index: 100;
+  margin-left: 25%;
 }
 
 .footer-principal {
