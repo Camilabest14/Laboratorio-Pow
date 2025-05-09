@@ -10,61 +10,63 @@
 
     <!--Estructura semantica-->
     
-    <header>  
-        <h1 class="Encabezado">Mi revista Digital de Recetas Dulces</h1>
-        <p class="subtitulo">Mi emprendimiento de galletas</p>
+    <header class="header-principal">  
+        <h1 class="header-principal h1">Configuración</h1>
+        <p >Personaliza tu experiencia</p>
     </header>
 
-        <nav  class="header-principal"   style="text-align: center;"> 
-            <a href="#inicio">Inicio</a>
-            <a href="#Recetas Nuevas">Recetas Nuevas</a>
-            <a href="#Blog">Blog</a>
-            <a href="#SobreMi">Sobre Mí</a>
-            <a href="/Contacto1Cv.html">Contacto</a>
-            <a href="/configuracion.html">Configuración</a>
-        </nav>
-        <hr>
+    <nav class="menu-principal"> 
+        <a href="/index1cv.html">Inicio</a>
+        <a href="#Recetas Nuevas">Recetas Nuevas</a>
+        <a href="#Blog">Blog</a>
+        <a href="#SobreMi">Sobre Mí</a>
+        <a href="/Contacto1Cv.html">Contacto</a>
+        <a href="/configuracion.html">Configuración</a>
+    </nav>
         <main>
             <!--Seccion de formularios-->
-            <section>
+            <section class="seccion">
                 <fieldset>
-                    <legend>Configuración del Perfil</legend>
+                    <legend >Configuración del Perfil</legend>
 
                     <label for="imagen de perfil">Imagen de perfil:</label>
                     <label><input type="file"></label>
-                    <br><br>
+                    
                     <label for="fecha de nacimiento">Fecha de nacimiento:</label>
                     <input type="date" id="fecha" name="fecha">
-                    <br><br>
+                 
                     <label for="genero">Género:</label>
                     <label><input type="radio" name="genero" value="mujer">Mujer</label>
                     <label><input type="radio" name="genero" value="hombre">Hombre</label>
                     <label><input type="radio" name="genero" value="otro">Mujer</label>
-                    <br><br>
+                   
                     <label for="color">Color principal de la página:</label>
                     <input type="color" id="color" name="color" value="#ff0000">
                 </fieldset>
-                <br><br>
+            </section>
+            <br>
+            <section class="seccion">
                 <form action="#" method="post">
                 <fieldset>
                     <legend>Cambiar clave</legend>
 
                     <label for="nombre">Nombre de Usuario:</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ej: Valel_12" required>
-                <br><br>
+                
                 <label for="password">Antigua Contraseña:</label>
                 <input type="password" id="password" name="password" minlength="8" required>
-                <br><br>
+                
                 <label for="password">Nueva Contraseña:</label>
                 <input type="password" id="password" name="password" minlength="8" required>
 
                 </fieldset> 
                 </form>
             </section>
-            <br><br> 
+
             <section>
-                <table border="1">
+                <table >
                     <thead>
+                        <h1 class="titulo-tabla">Usuarios registrados</h1>
                        <tr>
                         <th>Imagen de perfil</th>
                         <th>Correo</th>
@@ -121,17 +123,23 @@
             </section>              
         </main>      
     </body>
-    <hr>
-    <footer style="text-align: center;">
-    <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
-        <address>
-            Contacto: <a href="cvbest.23@est.ucab.edu.ve">cvbest.23@est.ucab.edu.ve</a>
-        </address>
-        <hr>
-        <br>
-        <audio controls>
-            <source src="https://samplelib.com/lib/preview/mp3/sample-3s.mp3">
-        </audio>      
-    </footer>
+  
+    <footer class="footer-principal">
+        <p>&copy; 2025 Mi Sitio Web. Todos los derechos reservados.</p>
+            <address>
+                Contacto: <a href="antojo.ve.1430@gmail.com">antojo.ve.1430@gmail.com</a>
+            </address>
+            <dl>
+                <dt>API "application programming interface" </dt>
+                <dd>Es una interfaz de procesamiento de aplicaciones entre un servidor web y un navegador web.</dd>
+    
+                <dt>SEO "Search Engine Optimization" </dt>   
+                <dd>Conjunto de estrategias y técnicas de optimización que se hacen en una página web para que aparezca orgánicamente en buscadores de Internet como Google, Yahoo o Youtube.</dd>
+            </dl>
+    
+            <audio controls>
+                <source src="https://samplelib.com/lib/preview/mp3/sample-3s.mp3">
+            </audio>      
+        </footer>
         
 </html>
