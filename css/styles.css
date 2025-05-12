@@ -40,20 +40,28 @@ body {
 .titulo_revista{
   font-family: var(--fuente-principal);
   color: white;
-  font-size: 2.5rem;
+  font-size: 3rem;
   margin-bottom: 0.5rem;
   text-shadow: 2px 2px 4px rgba(8, 8, 8, 0.3);
-}
-.titulo_revista{
-  font-family: var(--fuente-principal);
-  color: white;
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(8, 8, 8, 0.3);
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
 
-.titulo_revista:hover {
-  transform: rotate(0deg) scale(1.5);
+.titulo_revista:active{
+  animation: transformacionesMagicas 1.5s ease;
+}
+
+@keyframes transformacionesMagicas{
+  0%{
+    transform: scale(1) rotate(0deg) skew(0deg) translateY(0);
+  }
+  50%{
+    transform: scale(1.2) rotate(15deg) skew(-10deg) translateY(-20px);
+  }
+  100%{
+    transform: scale(1.1) rotate(-5deg) skew(5deg) translateY(-10px);
+  }
 }
 
 .menu-principal {
@@ -71,9 +79,14 @@ body {
   font-family: var(--fuente-principal);
 }
 
+.menu-principal a{
+  margin-right: 25px;
+}
+
 .subtitulo{
   font-style: var(--fuente-principal);
-  font-size: 1.2rem;
+  color: white;
+  font-size: 1rem;
   opacity: 0.9;
   font-weight: 300;
 }
@@ -218,7 +231,7 @@ label {
 
 }
 
-table {
+.tabla_usuarios{
   width: 95%;
   border-collapse: collapse;
   margin-bottom: 2rem;
@@ -226,12 +239,141 @@ table {
   color: var(--color-terciario);
   text-align: center;
   font-size: 20px;
+  background: #fdeaf2;
 }
+
+.tabla_usuarios tr:hover{
+  background-color: #e3f2fd;
+  cursor: pointer;
+}
+
+.tablaperfil_1{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tablaperfil_1{
+  transition: transform 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.tablaperfil_1:hover{
+  transform: scale(1.1);
+  border-color: var(--color-primario) ;
+  filter: brightness(1.1);
+  box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.2);
+}
+
+.tablaperfil_2{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tablaperfil_2{
+  transition: transform 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.tablaperfil_2:hover{
+  transform: scale(1.1);
+  border-color: var(--color-primario) ;
+  filter: brightness(1.1);
+  box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.2);
+}
+
+.tablaperfil_3{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tablaperfil_3{
+  transition: transform 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.tablaperfil_3:hover{
+  transform: scale(1.1);
+  border-color: var(--color-primario) ;
+  filter: brightness(1.1);
+  box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.2);
+}
+
+.tablaperfil_4{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tablaperfil_4{
+  transition: transform 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.tablaperfil_4:hover{
+  transform: scale(1.1);
+  border-color: var(--color-primario) ;
+  filter: brightness(1.1);
+  box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.2);
+}
+
+.tablaperfil_5{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.tablaperfil_5{
+  transition: transform 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.tablaperfil_5:hover{
+  transform: scale(1.1);
+  border-color: var(--color-primario) ;
+  filter: brightness(1.1);
+  box-shadow: 0 4px 8px  rgba(0, 0, 0, 0.2);
+}
+
 .form-contacto {
   text-align: center;
   font-family: var(--fuente-principal);
   color: var(--color-secundario);
   font-size: 25px;
+}
+
+input{
+  padding: 8px 12px;
+  border: 2px solid var(--color-primario);
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input:hover{
+  border-color: var(--color-secundario);
+   
+}
+input:focus{
+  border-color: var(--color-primario);
+  box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
 }
 
 th, td {
@@ -259,19 +401,40 @@ th {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  transition: all 0.2 ease;
+}
 
+.boton_1:hover{
+  background-color: var(--color-terciario);
+  transform: scale(1.05);
+}
+
+.boton_1:active{
+  transform: scale(0.98);
 }
 
 .boton_2 {
   padding: 10px 20px;
   background: var(--color-secundario);
   font-family: var(--fuente-principal);
+  margin-left: 44%;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   margin-top: 2%;
+  transition: all 0.2 ease;
 }
+
+.boton_2:hover{
+  background-color: var(--color-terciario);
+  transform: scale(1.05);
+}
+
+.boton_2:active{
+  transform: scale(0.98);
+}
+
 #chatbot {
  position: fixed;
     bottom: 20px;
@@ -280,19 +443,60 @@ th {
     height: 60px;
     background-color: var(--color-primario); 
     color: white;
-    border-radius: 50%;
+    border-radius: 50px;
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: all 0.3s;
+    transition: all 0.3s ease;
+}
+
+#chatbot:hover{
+  background-color: var(--color-footer);
+  border: transparent;
+  transform: scale(1.07);
+}
+
+#chatbot:active{
+  animation: pulsate 1s ease-out;
+}
+
+@keyframes pulsate {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(0.9);
+    opacity: 1;
+  }
+  100%{
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes dissapear{
+  0%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100%{
+    opacity: 0;
+    transform: translateY(-20px);
+    visibility: hidden;
+  }
+}
+
+#chatbot:active{
+  animation: dissapear 0.5s ease-in;
 }
 
 .footer-principal {
   background: linear-gradient(90deg, #ff5757, #8c52ff); 
   margin-top: 30px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: var(--fuente-principal);
   color: white;
   text-align: center;
 
