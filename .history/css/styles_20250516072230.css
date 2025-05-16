@@ -369,6 +369,7 @@ input{
 
 input:hover{
   border-color: var(--color-secundario);
+   
 }
 input:focus{
   border-color: var(--color-primario);
@@ -435,7 +436,7 @@ th {
 }
 
 #chatbot {
-  position: fixed;
+ position: fixed;
     bottom: 20px;
     right: 20px;
     width: 60px;
@@ -491,16 +492,6 @@ th {
 #chatbot:active{
   animation: dissapear 0.5s ease-in;
 }
-
-.foto_bot{
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-
-
 
 .footer-principal {
   background: linear-gradient(90deg, #ff5757, #8c52ff); 
