@@ -288,8 +288,12 @@ input:focus{
   box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
 }
 
+form {
+  margin-bottom: 30px;
+}
+
 th, td {
-  padding: 10px;
+  padding: 18px 16px;
   border: 1px solid #ddd;
   font-family: var(--fuente-principal);
 }
@@ -331,6 +335,8 @@ th {
   background: var(--color-secundario);
   font-family: var(--fuente-principal);
   margin-left: 44%;
+  margin-top: 30px; /* Aumenta el margen superior */
+  margin-bottom: 20px;
   color: white;
   border: none;
   border-radius: 5px;
