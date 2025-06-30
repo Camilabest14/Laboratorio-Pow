@@ -1,0 +1,133 @@
+/* Sección principal */
+.seccion {
+  margin: 20px auto;
+  padding: 1.5rem;
+  background-color: var(--color-fondo);
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+.tabla_usuarios {
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem auto;
+  border-collapse: collapse;
+  font-family: var(--fuente-principal);
+  color: var(--color-terciario);
+  text-align: center;
+  font-size: 1rem;
+  background: #fdeaf2;
+  box-sizing: border-box;
+  /* Elimina display: block y overflow-x: auto aquí */
+}
+
+/* Para pantallas pequeñas, permite scroll horizontal */
+@media (max-width: 768px) {
+  .tabla_usuarios {
+    display: block;
+    overflow-x: auto;
+    font-size: 0.95rem;
+  }
+} 
+
+.tabla_usuarios tr:hover {
+  background-color: #e3f2fd;
+  cursor: pointer;
+}
+
+/* Imagen de perfil en la tabla */
+.tablaperfil {
+  width: 100px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+}
+
+.tablaperfil:hover {
+  transform: scale(1.1);
+  border-color: var(--color-primario);
+  filter: brightness(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Botón secundario */
+.boton_2 {
+  padding: 10px 20px;
+  background: var(--color-secundario);
+  font-family: var(--fuente-principal);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  margin: 20px 0 20px 0;
+  transition: all 0.2s ease;
+  display: block;
+}
+
+.boton_2:hover {
+  background-color: var(--color-terciario);
+  transform: scale(1.05);
+}
+
+.boton_2:active {
+  transform: scale(0.98);
+}
+
+/* Formularios y campos */
+fieldset, form {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+label, input, select, button {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 0.7rem;
+  box-sizing: border-box;
+}
+
+input[type="radio"], input[type="color"] {
+  display: inline-block;
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+@media (min-width: 992px) {
+  .seccion form,
+  .seccion fieldset {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    background: transparent;
+    border: none;
+  }
+  .seccion label,
+  .seccion input,
+  .seccion select,
+  .seccion button {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+  .seccion label {
+    margin-bottom: 0.3rem;
+    font-size: 1.05rem;
+  }
+  .seccion input[type="radio"],
+  .seccion input[type="color"] {
+    width: auto;
+    display: inline-block;
+    margin-right: 0.5rem;
+  }
+}

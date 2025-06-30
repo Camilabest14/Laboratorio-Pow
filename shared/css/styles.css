@@ -15,7 +15,16 @@
 * {
   box-sizing:content-box;
 }
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
+  padding: 0;
   font-family: var(--fuente-principal);
   line-height: 1.6;
   background-color: var(--color-fondo);
@@ -24,18 +33,17 @@ body {
 .main-principal {
   display: flex;
 }
-
-
+.main-principal > article {
+  flex: 3;
+}
 /* Header */
 .header-principal {
   background: var(--color-header);
   font-family: var(--fuente-principal);
   padding: var(--espaciado-base);
   text-align: center;
-  margin-top: -8px;
-  margin-left: -8px;
-  margin-right: -8px;
   margin-bottom: 0px;
+  width: 100%;
 }
 .titulo_revista{
   font-family: var(--fuente-principal);
@@ -123,13 +131,14 @@ article {
 }
 
 .seccion {
-  margin-top: 20px;
-  margin-left: 30px;
-  margin-right: 30px;
+  margin: 20px auto;
   padding: 1rem;
-  background-color:var(--color-fondo);
+  background-color: var(--color-fondo);
   border-radius: 15px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  width: 100%;
+  box-sizing: border-box;
 }
 /* Estilos para el aside */
 
@@ -231,47 +240,6 @@ label {
 
 }
 
-.tabla_usuarios{
-  width: 95%;
-  border-collapse: collapse;
-  margin-bottom: 2rem;
-  font-family: var(--fuente-principal);
-  color: var(--color-terciario);
-  text-align: center;
-  font-size: 20px;
-  background: #fdeaf2;
-}
-
-.tabla_usuarios tr:hover{
-  background-color: #e3f2fd;
-  cursor: pointer;
-}
-
-.tablaperfil {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-  border: 2px solid transparent;
-  cursor: pointer;
-}
-
-.tablaperfil:hover {
-  transform: scale(1.1);
-  border-color: var(--color-primario);
-  filter: brightness(1.1);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-.form-contacto {
-  text-align: center;
-  font-family: var(--fuente-principal);
-  color: var(--color-secundario);
-  font-size: 25px;
-}
-
 input{
   padding: 8px 12px;
   border: 2px solid var(--color-primario);
@@ -308,17 +276,17 @@ th {
   text-align: center;
 }
 
-
 .boton_1 {
-  padding: 10px 20px;
+ padding: 10px 20px;
   background: var(--color-primario);
   font-family: var(--fuente-principal);
-  margin-left: 45%;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.2 ease;
+  transition: all 0.2s ease;
+  display: block;
+  margin: 20px auto; 
 }
 
 .boton_1:hover{
@@ -327,30 +295,6 @@ th {
 }
 
 .boton_1:active{
-  transform: scale(0.98);
-}
-
-.boton_2 {
-  padding: 10px 20px;
-  background: var(--color-secundario);
-  font-family: var(--fuente-principal);
-  margin-left: 44%;
-  margin-top: 30px; /* Aumenta el margen superior */
-  margin-bottom: 20px;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 2%;
-  transition: all 0.2 ease;
-}
-
-.boton_2:hover{
-  background-color: var(--color-terciario);
-  transform: scale(1.05);
-}
-
-.boton_2:active{
   transform: scale(0.98);
 }
 
@@ -426,6 +370,10 @@ th {
   font-family: var(--fuente-principal);
   color: white;
   text-align: center;
+  width: 100%;
+  margin: 0%;
+  padding: 20px 0;
+  box-sizing: border-box;
 
 }
 
@@ -477,10 +425,49 @@ th {
   box-shadow: none;
 }
 
+@media (max-width: 576px) {
+  .header-principal,
+  .footer-principal {
+    padding: 10px 0;
+    font-size: 1rem;
+  }
+}
+
+
 /* Responsive: centrar enlaces en mobile también */
 @media (max-width: 991px) {
   .navbar-nav {
     gap: 1rem;
     align-items: center;
+  }
+}
+
+@media (max-width: 991px) {
+  .main-principal {
+    flex-direction: column;
+  }
+  aside {
+    width: 100%;
+    margin: 0 0 20px 0;
+  }
+  .seccion, .tabla_usuarios {
+    padding: 0.5rem;
+    font-size: 16px;
+  }
+  .tabla_usuarios th, .tabla_usuarios td {
+    padding: 8px 4px;
+    font-size: 14px;
+  }
+  .tablaperfil {
+    width: 60px;
+    height: 60px;
+  }
+  .boton_2, .boton_1 {
+    margin-left: 0;
+    width: 100%;
+    font-size: 16px;
+  }
+  h2, .titulo_revista {
+    font-size: 2rem;
   }
 }
